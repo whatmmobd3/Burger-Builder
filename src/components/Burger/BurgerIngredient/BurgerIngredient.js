@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 
 import classes from "./BurgerIngredient.css";
 
-class App extends Component {
+class BurgerIngredient extends Component {
   render() {
+
     let ingredient = null;
 
     switch (this.props.type) {
@@ -37,12 +38,12 @@ class App extends Component {
       default:
         ingredient = null;
     }
-    return ingredient;
+    return ingredient
   }
 }
 
-App.propTypes = {
-    type: PropTypes.string.isRequired
-}
+BurgerIngredient.propTypes = {
+  type: PropTypes.string.isRequired,
+};
 
-export default App;
+export default BurgerIngredient;

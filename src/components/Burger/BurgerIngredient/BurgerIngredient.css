@@ -98,6 +98,7 @@
 }
 
 .Salad {
+    
     width: 85%;
     height: 7%;
     margin: 2% auto;
@@ -110,4 +111,12 @@
     height: 3%;
     background: linear-gradient(#bf3813, #c45e38);
     margin: 2% auto;
+}
+
+
+.bigblue {
+  color: DodgerBlue;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
 }
