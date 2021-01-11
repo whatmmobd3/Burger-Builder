@@ -1,15 +1,13 @@
-import React from 'react'
+import React from "react";
 
-import classes from './BuildControl.css'
+import classes from "./BuildControl.css";
 
-const App = props => (
-    <div className={classes.BuildControl}>
-        <div className={props.label}>
-            <button className={classes.Less}>Less</button>
-            <button className={classes.More}>More</button>
-        </div>
-    </div>
+const App = (props) => (
+  <div className={classes.BuildControl}>
+    <div>{props.label}</div>
+    <button className={classes.Less}>Less</button>
+    <button className={classes.More}>More</button>
+  </div>
+);
 
-)
-
-export default App
+export default App;
