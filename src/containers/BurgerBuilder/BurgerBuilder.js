@@ -44,12 +44,18 @@ class BurgerBuilder extends Component {
   };
 
   render() {
+    const disaledInfo = {...this.state.ingredients}
+    for(let c in disaledInfo) {
+      disaledInfo[c] = disaledInfo[c] <= 0
+    }
+    console.log(disaledInfo);
     return (
       <Aux>
         <Burger ingredients={this.state.ingredients} />
         <BuildControls
           ingredientAdded={this.addIngredientHandler}
           ingredientRemoved={this.removeIngredientHandler}
+          disabled={disaledInfo}
         />
       </Aux>
     );
