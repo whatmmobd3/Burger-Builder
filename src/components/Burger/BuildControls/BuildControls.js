@@ -17,6 +17,7 @@ const App = (props) => (
         key={c.label}
         label={c.label}
         added={() =>props.ingredientAdded(c.type)}
+        removed={() =>props.ingredientRemoved(c.type)}
       />
     ))}
   </div>
