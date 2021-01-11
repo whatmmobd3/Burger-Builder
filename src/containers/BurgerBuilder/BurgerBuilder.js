@@ -2,17 +2,13 @@ import React, { Component } from 'react';
 
 import Aux from '../../hoc/Aux1';
 import Burger from '../../components/Burger/Burger';
-
 class BurgerBuilder extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {...}
-    // }
+
     state = {
         ingredients: {
-            salad: 1,
-            bacon: 2,
-            cheese: 1,
+            salad: 2,
+            bacon: 1,
+            cheese: 3,
             meat: 1
         }
     }
@@ -28,5 +24,3 @@ class BurgerBuilder extends Component {
 }
 
 export default BurgerBuilder;
-
-// why this show
