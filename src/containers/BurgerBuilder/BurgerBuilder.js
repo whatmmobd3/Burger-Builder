@@ -6,9 +6,9 @@ import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 
 const INGREDIENT_PRICES = {
-  salad: 0.3,
+  salad: 0.2,
   bacon: 1,
-  cheese: 0.6,
+  cheese: 0.5,
   meat: 1.3,
 };
 class BurgerBuilder extends Component {
@@ -44,15 +44,16 @@ class BurgerBuilder extends Component {
   };
 
   render() {
-    const disaledInfo = {...this.state.ingredients}
-    for(let c in disaledInfo) {
-      disaledInfo[c] = disaledInfo[c] <= 0
+    const { ingredients, totalPrice } = this.state;
+    const disaledInfo = { ...this.state.ingredients };
+    for (let c in disaledInfo) {
+      disaledInfo[c] = disaledInfo[c] < 1;
     }
-    console.log(disaledInfo);
     return (
       <Aux>
-        <Burger ingredients={this.state.ingredients} />
+        <Burger ingredients={ingredients} />
         <BuildControls
+          price={totalPrice}
           ingredientAdded={this.addIngredientHandler}
           ingredientRemoved={this.removeIngredientHandler}
           disabled={disaledInfo}
