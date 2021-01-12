@@ -1,6 +1,7 @@
 import React from "react";
 
 import Aux from "../../../hoc/Aux1";
+import Button from '../../UI/Button/Button'
 
 const App = (props) => {
   const element = Object.keys(props.ingredients).map((e) => {
@@ -18,6 +19,8 @@ const App = (props) => {
       <p>Following ingredients: </p>
       <ul>{element}</ul>
       <p>Continue to Checkout?</p>
+      <Button  btnType="Danger" clicked={props.pruchaseCanceled}>CANCEL</Button>
+      <Button  btnType="Success" clicked={props.pruchaseContinued}>CONTINUE</Button>
     </Aux>
   );
 };
