@@ -18,6 +18,7 @@ const App = (props) => {
       <h3>Order</h3>
       <p>Following ingredients: </p>
       <ul>{element}</ul>
+      <p>Total Price: {props.price}</p>
       <p>Continue to Checkout?</p>
       <Button  btnType="Danger" clicked={props.pruchaseCanceled}>CANCEL</Button>
       <Button  btnType="Success" clicked={props.pruchaseContinued}>CONTINUE</Button>
